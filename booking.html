@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Ride | Moon Bikes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <img src="bac3.png" class="bg-layer" alt="Background">
+    <div class="overlay"></div>
+
+    <nav>
+        <img src="logo.png" alt="Moon Bikes" class="logo-img">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="models.html">The Collection</a>
+            <a href="booking.html" class="active">Book Your Ride</a>
+        </div>
+        <a href="tel:9840636309" class="btn-gold"><i class="fas fa-phone"></i></a>
+    </nav>
+
+    <div class="hero-container">
+        <div class="booking-wrapper">
+            <h2 style="font-family: 'Playfair Display'; color: var(--gold); margin-bottom: 2rem;">Reserve Your Machine</h2>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="phone" placeholder="Enter mobile number" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Brand</label>
+                    <select id="brand" onchange="updateModels()">
+                        <option value="" disabled selected>-- Choose Brand --</option>
+                        <option value="Royal Enfield">Royal Enfield</option>
+                        <option value="Yamaha">Yamaha</option>
+                        <option value="TVS">TVS</option>
+                        <option value="Bajaj">Bajaj</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hero">Hero</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Model</label>
+                    <select id="model">
+                        <option value="" disabled selected>-- Select Brand First --</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="sendWhatsapp()" class="btn-gold" style="width: 100%; border:none; margin-top: 1rem;">
+                    <i class="fab fa-whatsapp"></i> Send Booking Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
